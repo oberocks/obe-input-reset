@@ -48,7 +48,7 @@ $('input[name="example"]').obeInputReset({
 });
 ```
 
-If you have icon fonts available on your site, you can leverage your available font classes to use icons as your OBE Input Reset character. This is done by setting the option ```iconMode``` to ```true```, and including the necessary icon classes to specify the icon. This example uses the [FontAwesome Library](http://fontawesome.io/):
+If you have icon fonts available on your site, you can leverage your available font classes to use icons as your OBE Input Reset character. This is done by setting the option ```iconMode``` to ```true```, and including the necessary icon classes to specify the icon with the ```iconClasses``` option. This example uses the [FontAwesome Library](http://fontawesome.io/):
 ```javascript
 $('input[name="example"]').obeInputReset({
 	iconMode: true,  // Expects: true | false (Default = "false")
