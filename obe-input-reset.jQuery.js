@@ -24,12 +24,12 @@
         }, options );
         
         
-        // Construct Markup Elements
-        var wrapper = document.createElement("div");
-        // add a class name to the wrapper for JS/CSS functionality
+		// Construct Markup Elements
+		var wrapper = document.createElement("div");
+		// add a class name to the wrapper for JS/CSS functionality
 		wrapper.className = "obe-input-reset-wrapper";
-        var span = document.createElement("span");
-        // add a class name to the span for JS/CSS functionality
+		var span = document.createElement("span");
+		// add a class name to the span for JS/CSS functionality
 		span.className = "obe-input-reset";
         
         
