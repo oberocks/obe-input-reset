@@ -36,16 +36,16 @@ This plugin was designed to be bare-bones, so you can throw a variety of content
 ```javascript
 $('input[name="example"]').obeInputReset({
 	// Plugin options
-	iconMode: false,				// Expects: true | false (Default = "false")
-	text: "X"						// Expects: string (Default = "X")
+	iconMode: false,  // Expects: true | false (Default = "false")
+	text: "X"  // Expects: string (Default = "X")
 });
 ```
 
 You may also use HTML entity characters (depending on your server setup being able to handle UTF-8 characters):
 ```javascript
 $('input[name="example"]').obeInputReset({
-	iconMode: false,
-	text: "×"
+	iconMode: false,  // Expects: true | false (Default = "false")
+	text: "×"  // Expects: string (Default = "X")
 });
 ```
 
@@ -53,7 +53,7 @@ And if you have icon fonts available on your site, you can leverage your availab
 ```javascript
 $('input[name="example"]').obeInputReset({
 	// Plugin options
-	iconMode: true,					// Expects: true | false (Default = "false")
-	iconClasses: "fa fa-remove",	// Expects: string of icon classes (Default = "fa fa-remove")
+	iconMode: true,  // Expects: true | false (Default = "false")
+	iconClasses: "fa fa-remove",  // Expects: string of icon classes (Default = "fa fa-remove")
 });
 ```
