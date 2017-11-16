@@ -9,3 +9,12 @@ Next include the OBE Input Reset JS file (generally done just before the closing
 ```html
 <script src="js/obe-input-reset.jQuery.js"></script>
 ```
+And finally, include an HTML input element on your page.
+```html
+<input type="text" name="example" />
+```
+# Initialize Plugin
+With an input in place and the CSS + JS files included on the page, it's time to initialize the plugin!
+```javascript
+$("input").obeInputReset();
+```
