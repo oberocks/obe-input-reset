@@ -16,5 +16,5 @@ A lightweight and customizable jQuery plugin to add a clickable character to inp
 # Initialize Plugin
 With an input in place and the CSS + JS files included on the page, it's time to initialize the plugin!
 ```javascript
-$("input").obeInputReset();
+$('input[name="example"]').obeInputReset();
 ```
