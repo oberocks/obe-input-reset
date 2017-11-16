@@ -52,6 +52,6 @@ And if you have icon fonts available on your site, you can leverage your availab
 ```javascript
 $('input[name="example"]').obeInputReset({
 	iconMode: true,  // Expects: true | false (Default = "false")
-	iconClasses: "fa fa-remove",  // Expects: string of icon classes (Default = "fa fa-remove")
+	iconClasses: "fa fa-remove"  // Expects: string of icon classes (Default = "fa fa-remove")
 });
 ```
