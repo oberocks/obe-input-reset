@@ -17,9 +17,9 @@
         var settings = $.extend({
 			
 			// Default options
-			iconMode: false,				// Expects: true | false (Default = "false")
-			iconClasses: "fa fa-remove",	// Expects: string of icon classes (Default = "fa fa-remove")
-			text: "X"						// Expects: string (Default = "X")
+			iconMode: false,  // Expects: true | false (Default = "false")
+			iconClasses: "fa fa-remove",  // Expects: string of icon classes (Default = "fa fa-remove")
+			text: "X"  // Expects: string (Default = "X")
 			
         }, options );
         
@@ -42,7 +42,7 @@
         	if (settings.iconClasses.length > 0) {
         		
         		var content = document.createElement("i");
-        			content.className = settings.iconClasses;
+        		content.className = settings.iconClasses;
         			
         	}
         		
