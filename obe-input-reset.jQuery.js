@@ -17,9 +17,9 @@
         var settings = $.extend({
 			
 			// Default options
-			iconMode: false,				// Expects: true | false
-			iconClasses: "fa fa-remove",	// Expects: string of icon classes (depending on icon library)
-			text: "X"						// Expects: string | unencoded HTML entity character
+			iconMode: false,				// Expects: true | false (Default = "false")
+			iconClasses: "fa fa-remove",	// Expects: string of icon classes (Default = "fa fa-remove")
+			text: "X"						// Expects: string (Default = "X")
 			
         }, options );
         
