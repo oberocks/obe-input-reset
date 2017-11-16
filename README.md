@@ -35,7 +35,6 @@ $('input[name="example"]').obeInputReset();
 This plugin was designed to be bare-bones, so you can throw a variety of content at it. There are a handful of options currently baked-in. Here's an example of initializing the plugin:
 ```javascript
 $('input[name="example"]').obeInputReset({
-	// Plugin options
 	iconMode: false,  // Expects: true | false (Default = "false")
 	text: "X"  // Expects: string (Default = "X")
 });
@@ -52,7 +51,6 @@ $('input[name="example"]').obeInputReset({
 And if you have icon fonts available on your site, you can leverage your available font classes to use icons as your OBE Input Reset character. This is done by setting the option ```iconMode``` to ```true```, and including the necessary icon classes to specify the icon. This example uses the... wait for it... awesome [FontAwesome Library](http://fontawesome.io/icons/):
 ```javascript
 $('input[name="example"]').obeInputReset({
-	// Plugin options
 	iconMode: true,  // Expects: true | false (Default = "false")
 	iconClasses: "fa fa-remove",  // Expects: string of icon classes (Default = "fa fa-remove")
 });
