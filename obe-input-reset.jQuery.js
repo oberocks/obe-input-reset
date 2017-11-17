@@ -1,5 +1,5 @@
 /*!
- * OBE Input Reset v1.0.1
+ * OBE Input Reset v1.1.0
  * A lightweight and easy to customize jQuery plugin to add a clickable character to input elements
  * with click functionality to clear the input value, and focus the input.
  *
@@ -18,21 +18,34 @@
 
 			// Default options
 			iconMode: false,  // Expects: true | false (Default = "false")
-			iconClasses: "fa fa-remove",  // Expects: string of icon classes (Default = "fa fa-remove")
+			iconClasses: "",  // Expects: string of icon classes (Default = "")
 			text: "X",  // Expects: string (Default = "X")
 			color: "red",  // Expects: string of any valid CSS color declaration (Default = "red")
-			colorClass: ""  // Expects: string of any valid CSS class you have on the page (Default = "")
+			colorClass: "",  // Expects: string of any valid CSS class you have on the page (Default = "")
+			alignment: "right",  // Expects: left | right (Default = "right")
+			fontSize: "1.5rem",  // Expects: string of any valid CSS size values (Default = "1.5rem")
+			positionTop: "-2.3rem",  // Expects: string of any valid CSS font-size unit values (Default = "-2.3rem")
+			outsidePadding: "0.5rem"  // Expects: string of any valid CSS font-size unit values (Default = "0.5rem")
 	
 		}, options );
 
 
-		// Construct and add Classes to Markup Elements in Vanilla JS
+		// Construct and add Classes/Styles to Markup Elements in Vanilla JS
 		var wrapper = document.createElement("div");
-		// add a class name to the wrapper for JS/CSS functionality
-		wrapper.className = "obe-input-reset-wrapper";
+			wrapper.style.textAlign = settings.alignment;
+			// add a class name to the wrapper for JS/CSS functionality
+			wrapper.className = "obe-input-reset-wrapper";
+		
 		var span = document.createElement("span");
-		// add a class name to the span for JS/CSS functionality
-		span.className = "obe-input-reset";
+			span.style.fontSize = settings.fontSize;
+			span.style.top = settings.positionTop;
+			if (settings.alignment === "right") {
+				span.style.right = settings.outsidePadding;
+			} else if (settings.alignment === "left") {
+				span.style.left = settings.outsidePadding;
+			}
+			// add a class name to the span for JS/CSS functionality
+			span.className = "obe-input-reset";
 
 
 		if (settings.iconMode === false) {
