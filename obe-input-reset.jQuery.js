@@ -42,7 +42,7 @@
 			if (settings.colorClass.length > 0) {
 				span.className += " " + settings.colorClass;
 			} else {
-				content.style.color = settings.color;
+				span.css('color', settings.color);
 			}
 
 		} else if (settings.iconMode === true)  {
