@@ -1,4 +1,4 @@
-# OBE Input Reset v1.1.0
+# OBE Input Reset v1.1.1
 A lightweight and easy to customize jQuery plugin to add a clickable character to input elements, with click functionality to clear the input value, and then focus the input.
  
  
@@ -44,11 +44,13 @@ $('input[name="example"]').obeInputReset({
 	alignment: "right",  // Expects: left | right (Default = "right")
 	fontSize: "1.5rem",  // Expects: string of any valid CSS size values (Default = "1.5rem")
 	positionTop: "-2.3rem",  // Expects: string of any valid CSS font-size unit values (Default = "-2.3rem")
-	outsidePadding: "0.5rem"  // Expects: string of any valid CSS font-size unit values (Default = "0.5rem")
+	outsidePadding: "0.5rem",  // Expects: string of any valid CSS font-size unit values (Default = "0.5rem")
+	clickWidth: "30px"  // Expects: string of any valid CSS width unit values (Default = "30px")
 });
 ```
 
-You may also use HTML entity characters (depending on your server setup being able to handle UTF-8 characters):
+### Using HTML Entities
+You may also use HTML entity characters (depending on your server's configuration to handle UTF-8 characters):
 ```javascript
 $('input[name="example"]').obeInputReset({
 	iconMode: false,  // Expects: true | false (Default = "false")
@@ -57,7 +59,8 @@ $('input[name="example"]').obeInputReset({
 });
 ```
 
-As an alternative to using an color code, you may use the optional ```colorClass``` option to add color to your character:
+### Using Text Color Classes
+As an alternative to using an color code, you may use the optional ```colorClass``` option to add a text color to your reset character:
 ```javascript
 $('input[name="example"]').obeInputReset({
 	iconMode: false,  // Expects: true | false (Default = "false")
@@ -66,6 +69,18 @@ $('input[name="example"]').obeInputReset({
 });
 ```
 
+### Using the Width Option
+For usability concerns (especially for wider fingertips) there's a ```clickWidth``` option to fine tune the clickable region. Please note - the default is set to 30px wide, and the content within this space is aligned to the outside side of the element, so the clickable region extends from the outside to the center of the input. Increasing this value to anything over ```60px``` may cover user-added text inside the input. The container is transparent, but just note this may create a situation where a user cannot select the text underneath the click zone, and thus may accidentally lose their entered data by accidentally clicking the transparent trigger. Thus the default is set to a modest 30px wide.
+```javascript
+$('input[name="example"]').obeInputReset({
+	iconMode: false,  // Expects: true | false (Default = "false")
+	text: "×",  // Expects: string (Default = "X")
+	colorClass: "text-danger",  // Expects: string of any valid CSS class you have on the page (Default = "")
+	clickWidth: "30px"  // Expects: string of any valid CSS width unit values (Default = "30px")
+});
+```
+
+### Using Icon Font Libraries
 If you have icon fonts available on your site, you can leverage your available font classes (and color classes) to use icons as your OBE Input Reset character. This is done by setting the option ```iconMode``` to ```true```, and including the necessary icon classes to specify the icon with the ```iconClasses``` option. This example uses the [FontAwesome Library](http://fontawesome.io/) and [Bootstrap](https://getbootstrap.com/) classes:
 ```javascript
 $('input[name="example"]').obeInputReset({
@@ -74,7 +89,8 @@ $('input[name="example"]').obeInputReset({
 });
 ```
 
-And finally, here's another icon font example (using [Themify.me](http://themify.me/themify-icons) icons) that needed some small sizing and positioning tweaks:
+### Using the Positioning Options
+And finally, here's another icon font example (using [Themify.me Icons](http://themify.me/themify-icons)) that needed some small sizing and positioning tweaks:
 ```javascript
 $('input[name="example"]').obeInputReset({
 	iconMode: true,  // Expects: true | false (Default = "false")
