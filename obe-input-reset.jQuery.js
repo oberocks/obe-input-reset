@@ -1,6 +1,6 @@
 /*!
- * OBE Input Reset v1.0.0
- * A lightweight and customizable jQuery plugin to add a clickable character to input elements
+ * OBE Input Reset v1.0.1
+ * A lightweight and easy to customize jQuery plugin to add a clickable character to input elements
  * with click functionality to clear the input value, and focus the input.
  *
  * Licensed GPLv3 for open source use
@@ -19,7 +19,9 @@
 			// Default options
 			iconMode: false,  // Expects: true | false (Default = "false")
 			iconClasses: "fa fa-remove",  // Expects: string of icon classes (Default = "fa fa-remove")
-			text: "X"  // Expects: string (Default = "X")
+			text: "X",  // Expects: string (Default = "X")
+			color: "red",  // Expects: string of any valid CSS color declaration (Default = "red")
+			colorClass: ""  // Expects: string of any valid CSS class you have on the page (Default = "")
 	
 		}, options );
 
@@ -36,6 +38,12 @@
 		if (settings.iconMode === false) {
 
 			var content = document.createTextNode(settings.text);
+			
+			if (settings.colorClass.length > 0) {
+				span.className += " " + settings.colorClass;
+			} else {
+				content.style.color = settings.color;
+			}
 
 		} else if (settings.iconMode === true)  {
 
@@ -43,6 +51,12 @@
 
 				var content = document.createElement("i");
 				content.className = settings.iconClasses;
+				
+				if (settings.colorClass.length > 0) {
+					content.className += " " + settings.colorClass;
+				} else {
+					content.style.color = settings.color;
+				}
 	
 			}
 	
