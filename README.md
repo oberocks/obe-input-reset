@@ -76,7 +76,7 @@ $('input[name="example"]').obeInputReset({
 
 And finally, here's another icon font example (using [Themify.me](http://themify.me/themify-icons) icons) that needed some small sizing and positioning tweaks:
 ```javascript
-$("input").obeInputReset({
+$('input[name="example"]').obeInputReset({
 	iconMode: true,  // Expects: true | false (Default = "false")
 	iconClasses: "ti-close",  // Expects: string of icon classes (Default = "fa fa-remove")
 	colorClass: "text-danger",  // Expects: string of any valid CSS class you have on the page (Default = "")
