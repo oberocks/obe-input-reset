@@ -1,5 +1,5 @@
-# OBE Input Reset
-A lightweight and customizable jQuery plugin to add a clickable character to input elements, with click functionality to clear the input value, and then focus the input.
+# OBE Input Reset v1.0.1
+A lightweight and easy to customize jQuery plugin to add a clickable character to input elements, with click functionality to clear the input value, and then focus the input.
  
  
 # Dependencies
@@ -36,7 +36,8 @@ This plugin was designed to be bare-bones, so you can throw a variety of content
 ```javascript
 $('input[name="example"]').obeInputReset({
 	iconMode: false,  // Expects: true | false (Default = "false")
-	text: "X"  // Expects: string (Default = "X")
+	text: "X",  // Expects: string (Default = "X")
+	color: "red"  // Expects: string of any valid CSS color declaration (Default = "red")
 });
 ```
 
@@ -44,14 +45,24 @@ You may also use HTML entity characters (depending on your server setup being ab
 ```javascript
 $('input[name="example"]').obeInputReset({
 	iconMode: false,  // Expects: true | false (Default = "false")
-	text: "×"  // Expects: string (Default = "X")
+	text: "×",  // Expects: string (Default = "X")
+	color: "red"  // Expects: string of any valid CSS color declaration (Default = "red")
 });
 ```
 
-If you have icon fonts available on your site, you can leverage your available font classes to use icons as your OBE Input Reset character. This is done by setting the option ```iconMode``` to ```true```, and including the necessary icon classes to specify the icon with the ```iconClasses``` option. This example uses the [FontAwesome Library](http://fontawesome.io/):
+You may also use the optional ```colorClass``` option to add color to your character:
+```javascript
+$('input[name="example"]').obeInputReset({
+	iconMode: false,  // Expects: true | false (Default = "false")
+	text: "×",  // Expects: string (Default = "X")
+	colorClass: "text-danger"  // Expects: string of any valid CSS class you have on the page (Default = "")
+});
+```
+
+If you have icon fonts available on your site, you can leverage your available font classes (and color classes) to use icons as your OBE Input Reset character. This is done by setting the option ```iconMode``` to ```true```, and including the necessary icon classes to specify the icon with the ```iconClasses``` option. This example uses the [FontAwesome Library](http://fontawesome.io/) and [Bootstrap](https://getbootstrap.com/) classes:
 ```javascript
 $('input[name="example"]').obeInputReset({
 	iconMode: true,  // Expects: true | false (Default = "false")
-	iconClasses: "fa fa-remove"  // Expects: string of icon classes (Default = "fa fa-remove")
+	iconClasses: "fa fa-remove text-danger"  // Expects: string of icon classes (Default = "fa fa-remove")
 });
 ```
