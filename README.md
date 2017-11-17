@@ -32,12 +32,19 @@ $('input[name="example"]').obeInputReset();
  
  
 # Plugin Options
-This plugin was designed to be bare-bones, so you can throw a variety of content at it. There are a handful of options currently baked-in. Here's an example of initializing the plugin:
+This plugin was designed to be bare-bones, so you can throw a variety of content at it. There are a handful of options currently baked-in. Here's an example of initializing the plugin with all of the default options for your reference:
 ```javascript
 $('input[name="example"]').obeInputReset({
+	// Default options
 	iconMode: false,  // Expects: true | false (Default = "false")
+	iconClasses: "",  // Expects: string of icon classes (Default = "")
 	text: "X",  // Expects: string (Default = "X")
-	color: "red"  // Expects: string of any valid CSS color declaration (Default = "red")
+	color: "red",  // Expects: string of any valid CSS color declaration (Default = "red")
+	colorClass: "",  // Expects: string of any valid CSS class you have on the page (Default = "")
+	alignment: "right",  // Expects: left | right (Default = "right")
+	fontSize: "1.5rem",  // Expects: string of any valid CSS size values (Default = "1.5rem")
+	positionTop: "-2.3rem",  // Expects: string of any valid CSS font-size unit values (Default = "-2.3rem")
+	outsidePadding: "0.5rem"  // Expects: string of any valid CSS font-size unit values (Default = "0.5rem")
 });
 ```
 
@@ -50,7 +57,7 @@ $('input[name="example"]').obeInputReset({
 });
 ```
 
-You may also use the optional ```colorClass``` option to add color to your character:
+As an alternative to using an color code, you may use the optional ```colorClass``` option to add color to your character:
 ```javascript
 $('input[name="example"]').obeInputReset({
 	iconMode: false,  // Expects: true | false (Default = "false")
@@ -64,5 +71,18 @@ If you have icon fonts available on your site, you can leverage your available f
 $('input[name="example"]').obeInputReset({
 	iconMode: true,  // Expects: true | false (Default = "false")
 	iconClasses: "fa fa-remove text-danger"  // Expects: string of icon classes (Default = "fa fa-remove")
+});
+```
+
+And finally, here's another icon font example that needed some small sizing and positioning tweaks:
+```javascript
+$("input").obeInputReset({
+	iconMode: true,  // Expects: true | false (Default = "false")
+	iconClasses: "ti-close",  // Expects: string of icon classes (Default = "fa fa-remove")
+	colorClass: "text-danger",  // Expects: string of any valid CSS class you have on the page (Default = "")
+	alignment: "right",  // Expects: left | right (Default = "right")
+	fontSize: "1.25rem",  // Expects: string of any valid CSS size values (Default = "1.5rem")
+	positionTop: "-2rem",  // Expects: string of any valid CSS font-size unit values (Default = "-2.3rem")
+	outsidePadding: "0.5rem"  // Expects: string of any valid CSS font-size unit values (Default = "0.5rem")
 });
 ```
