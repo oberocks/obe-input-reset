@@ -26,7 +26,7 @@
 		}, options );
 
 
-		// Construct Markup Elements
+		// Construct and add Classes to Markup Elements in Vanilla JS
 		var wrapper = document.createElement("div");
 		// add a class name to the wrapper for JS/CSS functionality
 		wrapper.className = "obe-input-reset-wrapper";
@@ -40,9 +40,9 @@
 			var content = document.createTextNode(settings.text);
 			
 			if (settings.colorClass.length > 0) {
-				span.className += " " + settings.colorClass;
+				$(span).addClass(settings.colorClass);
 			} else {
-				span.css('color', settings.color);
+				$(span).css('color', settings.color);
 			}
 
 		} else if (settings.iconMode === true)  {
@@ -53,9 +53,9 @@
 				content.className = settings.iconClasses;
 				
 				if (settings.colorClass.length > 0) {
-					content.className += " " + settings.colorClass;
+					$(content).addClass(settings.colorClass);
 				} else {
-					content.style.color = settings.color;
+					$(content).css('color', settings.color);
 				}
 	
 			}
