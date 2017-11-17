@@ -1,6 +1,6 @@
 /*!
- * OBE Input Reset v1.0.0
- * A lightweight and customizable jQuery plugin to add a clickable character to input elements
+ * OBE Input Reset v1.0.1
+ * A lightweight and easy to customize jQuery plugin to add a clickable character to input elements
  * with click functionality to clear the input value, and focus the input.
  *
  * Licensed GPLv3 for open source use
@@ -17,7 +17,6 @@
 
 .obe-input-reset {
 	display: inline-block;
-	color: red;
 	font-size: 1.5rem;
 	position: relative;
 	top: -2.3rem;
