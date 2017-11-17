@@ -70,7 +70,7 @@ If you have icon fonts available on your site, you can leverage your available f
 ```javascript
 $('input[name="example"]').obeInputReset({
 	iconMode: true,  // Expects: true | false (Default = "false")
-	iconClasses: "fa fa-remove text-danger"  // Expects: string of icon classes (Default = "fa fa-remove")
+	iconClasses: "fa fa-remove text-danger"  // Expects: string of icon classes (Default = "")
 });
 ```
 
@@ -78,7 +78,7 @@ And finally, here's another icon font example (using [Themify.me](http://themify
 ```javascript
 $('input[name="example"]').obeInputReset({
 	iconMode: true,  // Expects: true | false (Default = "false")
-	iconClasses: "ti-close",  // Expects: string of icon classes (Default = "fa fa-remove")
+	iconClasses: "ti-close",  // Expects: string of icon classes (Default = "")
 	colorClass: "text-danger",  // Expects: string of any valid CSS class you have on the page (Default = "")
 	alignment: "right",  // Expects: left | right (Default = "right")
 	fontSize: "1.25rem",  // Expects: string of any valid CSS size values (Default = "1.5rem")
