@@ -74,7 +74,7 @@ $('input[name="example"]').obeInputReset({
 });
 ```
 
-And finally, here's another icon font example that needed some small sizing and positioning tweaks:
+And finally, here's another icon font example (using [Themify.me](http://themify.me/themify-icons) icons) that needed some small sizing and positioning tweaks:
 ```javascript
 $("input").obeInputReset({
 	iconMode: true,  // Expects: true | false (Default = "false")
